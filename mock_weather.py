@@ -8,7 +8,7 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-@app.route('/weather/2.5/data/')
+@app.route('/weather/2.5/data/', methods = ['POST','GET'])
 def list():
    return render_template("weather.json")
 
